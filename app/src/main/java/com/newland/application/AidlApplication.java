@@ -1,6 +1,7 @@
 package com.newland.application;
 
 import android.app.Application;
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -18,19 +19,27 @@ import com.orhanobut.logger.PrettyFormatStrategy;
 public class AidlApplication extends Application {
 
     private static Ddi hal;
+    private static Context context;
 
     @Override
     public void onCreate() {
         super.onCreate();
         ConfigLog();
+        context = this;
 
     }
 
     public static Ddi getinstanceDdi(){
         if (null == hal){
             hal = new Ddi();
+            hal.ddi_ddi_sys_init();
         }
         return hal;
+    }
+
+    public static Context getContext(){
+
+        return context;
     }
 
     private void ConfigLog(){

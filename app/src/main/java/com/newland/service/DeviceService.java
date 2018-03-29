@@ -8,6 +8,9 @@ import android.util.Log;
 
 import com.newland.aidl.deviceService.AidlDeviceService;
 import com.newland.aidl.impl.AidlDeviceInfo;
+import com.newland.aidl.impl.AidlICCard;
+import com.newland.aidl.impl.AidlLed;
+import com.newland.aidl.impl.AidlRFCard;
 
 /**
  * Created by Administrator on 2018\3\22 0022.
@@ -52,12 +55,12 @@ public class DeviceService extends Service
 
         @Override
         public IBinder getICCard() throws RemoteException {
-            return null;
+            return new AidlICCard();
         }
 
         @Override
         public IBinder getRFCard() throws RemoteException {
-            return null;
+            return new AidlRFCard();
         }
 
         @Override
@@ -67,7 +70,7 @@ public class DeviceService extends Service
 
         @Override
         public IBinder getLed() throws RemoteException {
-            return null;
+            return new AidlLed();
         }
 
         @Override
