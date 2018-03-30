@@ -10,6 +10,7 @@ import com.newland.aidl.deviceService.AidlDeviceService;
 import com.newland.aidl.impl.AidlDeviceInfo;
 import com.newland.aidl.impl.AidlICCard;
 import com.newland.aidl.impl.AidlLed;
+import com.newland.aidl.impl.AidlPrinter;
 import com.newland.aidl.impl.AidlRFCard;
 
 /**
@@ -50,7 +51,7 @@ public class DeviceService extends Service
 
         @Override
         public IBinder getPrinter() throws RemoteException {
-            return null;
+            return new AidlPrinter();
         }
 
         @Override
