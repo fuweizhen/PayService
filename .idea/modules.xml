@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PayService.iml" filepath="$PROJECT_DIR$/PayService.iml" />
+      <module fileurl="file://E:\jollytech\S500\远眺\PayService\PayService.iml" filepath="E:\jollytech\S500\远眺\PayService\PayService.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\jollytech\S500\远眺\PayService\app\app.iml" filepath="E:\jollytech\S500\远眺\PayService\app\app.iml" />
     </modules>
   </component>
 </project>

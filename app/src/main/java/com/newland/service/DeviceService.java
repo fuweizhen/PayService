@@ -12,6 +12,8 @@ import com.newland.aidl.impl.AidlICCard;
 import com.newland.aidl.impl.AidlLed;
 import com.newland.aidl.impl.AidlPrinter;
 import com.newland.aidl.impl.AidlRFCard;
+import com.newland.aidl.impl.PBOC;
+import com.newland.aidl.impl.Pinpad;
 
 /**
  * Created by Administrator on 2018\3\22 0022.
@@ -41,12 +43,12 @@ public class DeviceService extends Service
 
         @Override
         public IBinder getPBOC() throws RemoteException {
-            return null;
+            return new PBOC();
         }
 
         @Override
         public IBinder getPinpad() throws RemoteException {
-            return null;
+            return new Pinpad();
         }
 
         @Override
